@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <ul class="nav-left">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <div class="logo-name">JA MARIA</div>
+        <div class="nav-right">
+            <a href="contact.html" class="btn-contact">Get in touch!</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-about">
+        <div class="hero-full-image">
+            <img src="/images/hero-about-me.png" alt="About Me" />
+        </div>
+        <div class="hero-welcome">
+            WELCOME!
+            <h1>COME SEE WHAT'S IN STORE</h1>
+            <p>
+                Hi! I am Ja Maria P. Tolentino, an Information Technology graduate specializing in Application Development.
+                I enjoy building projects from start to finish - both frontend and backend - as a way to channel my creativity and problem-solving skills.
+            </p>
+        </div>
+    </section>
+
+    <!-- SCROLL DOWN -->
+    <div class="scroll-down">
+        <img src="/images/scroll-down.png" alt="Scroll Down" />
+    </div>
+
+    <!-- ABOUT ME ID -->
+    <section class="about">
+        <div class="id-scan">
+            <img src="/images/about-me-id.png" alt="ID Card" />
+            <div class="scan-line"></div>
+        </div>
+    </section>
+
+    <!-- LOADING / BOOT SECTION -->
+    <section class="skills-boot" id="skills-boot">
+        <div class="boot-card">
+            <div class="boot-topbar">
+                <span>JA MARIA SYSTEM</span>
+                <span id="boot-status">BOOTING...</span>
+            </div>
+            <div class="boot-content">
+                <div class="boot-label">LOADING PROFILE...</div>
+                <div class="boot-message" id="boot-message">
+                    Initializing portfolio system
+                </div>
+                <div class="boot-progress-list">
+                    <div class="boot-row">
+                        <div class="boot-row-label">
+                            <span>PROFILE</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="boot-bar">
+                            <span class="boot-fill fill-profile"></span>
+                        </div>
+                    </div>
+
+                    <div class="boot-row">
+                        <div class="boot-row-label">
+                            <span>TECHNICAL SKILLS</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="boot-bar">
+                            <span class="boot-fill fill-skills"></span>
+                        </div>
+                    </div>
+
+                    <div class="boot-row">
+                        <div class="boot-row-label">
+                            <span>SYSTEM</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="boot-bar">
+                            <span class="boot-fill fill-system"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boot-percent" id="boot-percent">0%</div>
+                <div class="boot-ready" id="boot-ready">SYSTEM READY!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JA MARIA PROFILE DESKTOP -->
+    <section class="skills-desktop" id="technical-skills">
+        <div class="desktop-window">
+
+            <!-- WINDOW HEADER -->
+            <div class="desktop-header">
+                <div class="desktop-title">
+                    <span class="desktop-dot"></span>
+                    JA MARIA PROFILE
+                </div>
+                <div class="window-controls">
+                    <span>−</span>
+                    <span>□</span>
+                    <span>×</span>
+                </div>
+            </div>
+
+            <!-- PROFILE TABS -->
+            <div class="profile-tabs">
+                <button class="profile-tab active" data-tab="education-tab">
+                    EDUCATION
+                </button>
+                <button class="profile-tab" data-tab="interest-tab">
+                    AREAS OF INTEREST
+                </button>
+                <button class="profile-tab" data-tab="skills-tab">
+                    TECHNICAL SKILLS
+                </button>
+            </div>
+
+            <!-- DESKTOP CONTENT -->
+            <div class="desktop-body">
+
+                <!-- EDUCATION TAB -->
+                <div class="profile-tab-content active" id="education-tab">
+                    <div class="desktop-path">
+                        JA MARIA / EDUCATION
+                    </div>
+
+                    <div class="education-content">
+                        <div class="education-label">EDUCATION</div>
+
+                        <h2>MAPÚA UNIVERSITY - MAKATI CAMPUS</h2>
+
+                        <h3>
+                            Bachelor of Science in Information Technology
+                        </h3>
+
+                        <p class="education-specialization">
+                            Specialization, Application Development
+                        </p>
+
+                        <p class="education-years">
+                            2023 - 2026
+                        </p>
+
+                        <div class="education-details">
+                            <div class="education-achievements">
+                                <p>
+                                    <span>AY. 2023-2024</span>
+                                    Dean’s Lister - 4th Quarter
+                                </p>
+
+                                <p>
+                                    <span>AY. 2024-2025</span>
+                                    Dean’s Lister - 2nd Trimester
+                                </p>
+
+                                <p>
+                                    <span>AY. 2025-2026</span>
+                                    Dean’s Lister - 1st-3rd Trimester
+                                </p>
+                            </div>
+
+                            <div class="education-honors">
+                                <div class="latin-honors">
+                                    GRADUATED MAGNA CUM LAUDE
+                                </div>
+
+                                <div class="running-average">
+                                    FINAL RUNNING AVERAGE
+                                    <strong>1.3889</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AREAS OF INTEREST TAB -->
+                <div class="profile-tab-content" id="interest-tab">
+                    <div class="desktop-path">
+                        JA MARIA / AREAS OF INTEREST
+                    </div>
+
+                    <div class="interest-content">
+                        <div class="interest-heading">
+                            <span>WHAT I'M INTERESTED IN</span>
+                            <small>Areas I enjoy exploring and building with.</small>
+                        </div>
+
+                        <div class="interest-grid">
+                            <div class="interest-card">
+                                <div class="interest-icon">IT</div>
+                                <div class="interest-text">
+                                    <h3>Information Technology</h3>
+                                    <p>
+                                        Exploring technology and building practical digital solutions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="interest-card">
+                                <div class="interest-icon">UI</div>
+                                <div class="interest-text">
+                                    <h3>UI / UX</h3>
+                                    <p>
+                                        Creating interfaces that are both visually engaging and easy to use.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="interest-card">
+                                <div class="interest-icon">FS</div>
+                                <div class="interest-text">
+                                    <h3>Full-Stack Development</h3>
+                                    <p>
+                                        Building applications across the frontend, backend, APIs, and databases.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="interest-card">
+                                <div class="interest-icon">WM</div>
+                                <div class="interest-text">
+                                    <h3>Web &amp; Mobile Application</h3>
+                                    <p>
+                                        Developing applications for web and mobile platforms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL SKILLS TAB -->
+                <div class="profile-tab-content" id="skills-tab">
+                    <div class="desktop-path">
+                        JA MARIA / TECHNICAL SKILLS
+                    </div>
+
+                    <div class="desktop-heading">
+                        <span>WELCOME TO MY TOOLBOX!</span>
+                        <small>Click a folder to explore.</small>
+                    </div>
+
+                    <!-- FOLDERS -->
+                    <div class="skill-folder-grid">
+                        <button class="skill-folder" data-category="programming" style="--folder-delay: 0s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">PROGRAMMING</span>
+                            <span class="folder-count">09</span>
+                        </button>
+
+                        <button class="skill-folder" data-category="frameworks" style="--folder-delay: .12s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">FRAMEWORKS</span>
+                            <span class="folder-count">04</span>
+                        </button>
+
+                        <button class="skill-folder" data-category="deployment" style="--folder-delay: .24s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">CLOUD + DEPLOYMENT</span>
+                            <span class="folder-count">05</span>
+                        </button>
+
+                        <button class="skill-folder" data-category="web" style="--folder-delay: .36s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">WEB TECHNOLOGIES</span>
+                            <span class="folder-count">05</span>
+                        </button>
+
+                        <button class="skill-folder" data-category="databases" style="--folder-delay: .48s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">DATABASES</span>
+                            <span class="folder-count">02</span>
+                        </button>
+
+                        <button class="skill-folder" data-category="design" style="--folder-delay: .60s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">DESIGN</span>
+                            <span class="folder-count">05</span>
+                        </button>
+
+                        <button class="skill-folder" data-category="ides" style="--folder-delay: .72s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">IDEs + EDITORS</span>
+                            <span class="folder-count">08</span>
+                        </button>
+
+                        <button class="skill-folder" data-category="productivity" style="--folder-delay: .84s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">PRODUCTIVITY</span>
+                            <span class="folder-count">08</span>
+                        </button>
+
+                        <button class="skill-folder" data-category="operating-systems" style="--folder-delay: .96s;">
+                            <span class="folder-icon"></span>
+                            <span class="folder-name">OPERATING SYSTEMS</span>
+                            <span class="folder-count">02</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TASKBAR -->
+            <div class="desktop-taskbar">
+                <div class="taskbar-left">
+                    <span class="taskbar-start">JA</span>
+                    <span>JA MARIA PROFILE</span>
+                </div>
+
+                <div class="taskbar-right">
+                    <span>● ONLINE</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILL WINDOW / MODAL -->
+    <div class="skill-modal" id="skill-modal" aria-hidden="true">
+        <div class="skill-modal-overlay" data-close-modal></div>
+
+        <div class="skill-panel">
+            <div class="skill-panel-header">
+                <div id="skill-panel-title">SKILLS</div>
+
+                <button class="skill-close" id="skill-close">
+                    ×
+                </button>
+            </div>
+
+            <div class="skill-panel-content">
+                <div class="skill-panel-description" id="skill-panel-description">
+                    Skills and technologies
+                </div>
+
+                <div class="skill-items" id="skill-items"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT PAGE SCRIPT -->
+    <script src="about.js"></script>
+
+</body>
+</html>

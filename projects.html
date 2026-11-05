@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <ul class="nav-left">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+        </ul>
+
+        <div class="logo-name">JA MARIA</div>
+
+        <div class="nav-right">
+            <a href="contact.html" class="btn-contact">Get in touch!</a>
+        </div>
+    </nav>
+
+    <!-- PROJECTS PAGE -->
+    <section class="projects">
+        <div class="projects-container">
+
+        <!-- PROJECTS DESKTOP WINDOW -->
+        <div class="projects-top-window">
+            <div class="projects-top-bar">
+                <div class="window-controls">
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                </div>
+
+                <span class="window-title">JA MARIA / PROJECTS</span>
+
+                <div class="window-buttons">
+                    <span>−</span>
+                    <span>□</span>
+                    <span>×</span>
+                </div>
+            </div>
+
+            <div class="projects-top-content">
+                <p class="projects-label">JA MARIA / PROJECTS</p>
+                <h1>MY PROJECTS</h1>
+                <p class="projects-intro">
+                    A collection of applications, systems, research, and other projects I worked on throughout my studies.
+                </p>
+            </div>
+        </div>
+
+            <!-- FEATURED PROJECT -->
+            <div class="featured-project">
+                <div class="featured-top">
+                    <span class="featured-label">FEATURED PROJECT</span>
+                    <span class="featured-year">2026</span>
+                </div>
+
+                <div class="featured-content">
+                    <div class="featured-icon">PZ</div>
+
+                    <div class="featured-details">
+                        <h2>PhysioZap</h2>
+                        <p class="featured-title">
+                            A Cross-Platform Next-Generation Mobile Application for Targeted Muscle Rehabilitation and Interactive Physiotherapy with Body-Part Mapping
+                        </p>
+                        <p class="featured-description">
+                            A cross-platform mobile health application developed for TheLightPhysio Physical Therapy Clinic, featuring interactive body-part mapping, personalized rehabilitation, teleconsultation, progress tracking, and appointment management.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>React Native</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MySQL</span>
+                        </div>
+
+                        <button class="view-project" onclick="openProject('physiozap')">
+                            VIEW PROJECT
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT ARCHIVE -->
+            <div class="archive-header">
+                <div>
+                    <p class="projects-label">PROJECT ARCHIVE</p>
+                    <h2>MY WORK</h2>
+                </div>
+
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="personal">PERSONAL</button>
+                    <button class="filter-btn" data-filter="group">GROUP</button>
+                    <button class="filter-btn" data-filter="research">RESEARCH</button>
+                </div>
+            </div>
+
+            <div class="project-grid">
+
+                <!-- PERSONAL PROJECTS -->
+                <div class="project-card" data-category="personal" onclick="openProject('pizza-planet')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>PERSONAL</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Pizza Planet</h3>
+                    <p>Online Pizza Ordering System</p>
+                    <div class="card-tech">Angular · Spring Boot · MySQL</div>
+                </div>
+
+                <div class="project-card" data-category="personal" onclick="openProject('personalized-pizza')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>PERSONAL</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Personalized Pizza Ordering System</h3>
+                    <p>Event-driven Java GUI application</p>
+                    <div class="card-tech">Java · Event-Driven Programming</div>
+                </div>
+
+                <div class="project-card" data-category="personal" onclick="openProject('pet-grooming')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>PERSONAL</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Pet Grooming Appointment System</h3>
+                    <p>CRUD-based appointment management system</p>
+                    <div class="card-tech">Java · JavaFX</div>
+                </div>
+
+                <!-- GROUP PROJECTS -->
+                <div class="project-card" data-category="group" onclick="openProject('intaker')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2026</span>
+                    </div>
+                    <h3>Shift-Based Intaker & Solver Directory</h3>
+                    <p>Support team directory with roles and status</p>
+                    <div class="card-tech">Web · Figma · React</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('rollcall')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2026</span>
+                    </div>
+                    <h3>RollCall+</h3>
+                    <p>IoT-based smart classroom attendance system</p>
+                    <div class="card-tech">ESP32 · RFID · Google Sheets</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('lakbaybites')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2026</span>
+                    </div>
+                    <h3>LakbayBites</h3>
+                    <p>Filipino food and culinary tourism concept</p>
+                    <div class="card-tech">Business Model · Web Application</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('sharktap')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2026</span>
+                    </div>
+                    <h3>SharkTap</h3>
+                    <p>Real-time multiplayer tap game</p>
+                    <div class="card-tech">Spring Boot · Apache Kafka</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('upims')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>UPIMS - The Green Table Co.</h3>
+                    <p>Full-stack inventory management system</p>
+                    <div class="card-tech">Spring Boot · REST · MySQL</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('silver-lining')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Silver Lining Laundry Services</h3>
+                    <p>Systems integration architecture</p>
+                    <div class="card-tech">XML · Systems Integration</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('horror-case-study')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Horror Movie Box Office Case Study</h3>
+                    <p>Data mining and predictive modeling</p>
+                    <div class="card-tech">Python · Jupyter Notebook</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('horror-analysis')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Horror Movie Box Office Analysis</h3>
+                    <p>Data science project using CRISP-DM</p>
+                    <div class="card-tech">Python · C5.0 Decision Tree</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('wais-ways')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Wais Ways</h3>
+                    <p>Interactive climate action and disaster preparedness app</p>
+                    <div class="card-tech">Figma · Mobile UI/UX</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('guinayangan')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Guinayangan Tourism</h3>
+                    <p>Website promoting local attractions and culture</p>
+                    <div class="card-tech">HTML · CSS · PHP</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('healthcare')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Healthcare Management System</h3>
+                    <p>Desktop application for healthcare management</p>
+                    <div class="card-tech">Java · Desktop Application</div>
+                </div>
+
+                <div class="project-card" data-category="group" onclick="openProject('carwash')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>GROUP</span>
+                        <span>2024</span>
+                    </div>
+                    <h3>Car Wash Management Database System</h3>
+                    <p>Database system with automated procedures</p>
+                    <div class="card-tech">Oracle SQL · Procedures · Triggers</div>
+                </div>
+
+                <!-- RESEARCH -->
+                <div class="project-card" data-category="research" onclick="openProject('physio-research')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>RESEARCH</span>
+                        <span>2026</span>
+                    </div>
+                    <h3>PhysioZap Design Analysis</h3>
+                    <p>Research on targeted muscle rehabilitation and interactive physiotherapy</p>
+                    <div class="card-tech">Usability · Mobile Application</div>
+                </div>
+
+                <div class="project-card" data-category="research" onclick="openProject('roblox')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>RESEARCH</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Mobile Interaction Design in Roblox Gaming</h3>
+                    <p>Study on multi-touch usability, immersion, and prolonged play</p>
+                    <div class="card-tech">UX Research · Survey</div>
+                </div>
+
+                <div class="project-card" data-category="research" onclick="openProject('cognitive-ai')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>RESEARCH</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Mind Games and Machines</h3>
+                    <p>AI and behavioral biometrics in cybersecurity</p>
+                    <div class="card-tech">AI · Cybersecurity · Research</div>
+                </div>
+
+                <div class="project-card" data-category="research" onclick="openProject('social-engineering')">
+                    <div class="folder-icon"></div>
+                    <div class="project-card-top">
+                        <span>RESEARCH</span>
+                        <span>2024</span>
+                    </div>
+                    <h3>Two Steps Ahead</h3>
+                    <p>Cognitive biases and social engineering attacks</p>
+                    <div class="card-tech">Cybersecurity · Case Studies</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT MODAL -->
+    <div class="project-modal" id="projectModal">
+        <div class="project-window">
+            <div class="project-window-header">
+                <span id="modalCategory">PROJECT</span>
+                <button onclick="closeProject()">×</button>
+            </div>
+
+            <div class="project-window-body">
+                <div class="modal-icon" id="modalIcon">PZ</div>
+
+                <div class="modal-content">
+                    <p class="modal-year" id="modalYear"></p>
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-subtitle" id="modalSubtitle"></p>
+
+                    <div class="modal-section">
+                        <h4>ABOUT THE PROJECT</h4>
+                        <p id="modalDescription"></p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h4>TECHNOLOGIES</h4>
+                        <div class="modal-tech" id="modalTech"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projects = {
+            "physiozap": {
+                category: "THESIS PROJECT",
+                year: "2026",
+                icon: "PZ",
+                title: "PhysioZap",
+                subtitle: "Cross-Platform Mobile Application for Targeted Muscle Rehabilitation",
+                description: "A cross-platform mobile health application developed for TheLightPhysio Physical Therapy Clinic. The application features interactive body-part mapping, personalized rehabilitation, teleconsultation, progress tracking, and appointment management.",
+                tech: ["React Native", "Node.js", "Express.js", "MySQL"]
+            },
+            "pizza-planet": {
+                category: "PERSONAL PROJECT",
+                year: "2025",
+                icon: "PP",
+                title: "Pizza Planet",
+                subtitle: "Online Pizza Ordering System",
+                description: "A full-stack ecommerce application for managing pizza menus, customer orders, and order tracking.",
+                tech: ["Angular", "Spring Boot", "MySQL"]
+            },
+            "personalized-pizza": {
+                category: "PERSONAL PROJECT",
+                year: "2025",
+                icon: "PZ",
+                title: "Personalized Pizza Ordering System",
+                subtitle: "Event-driven Programming using Java",
+                description: "A GUI application developed using Java event-driven programming for creating and managing customized pizza orders.",
+                tech: ["Java", "Event-Driven Programming", "GUI"]
+            },
+            "pet-grooming": {
+                category: "PERSONAL PROJECT",
+                year: "2025",
+                icon: "PG",
+                title: "Pet Grooming Appointment System",
+                subtitle: "CRUD-Based Management System",
+                description: "A CRUD-based system for managing customers, pets, groomers, services, and appointments.",
+                tech: ["Java", "JavaFX", "CRUD"]
+            },
+            "intaker": {
+                category: "GROUP PROJECT",
+                year: "2026",
+                icon: "IS",
+                title: "Shift-Based Intaker & Solver Directory",
+                subtitle: "OJT Project",
+                description: "A web-based directory designed to organize support team members by roles, shifts, and availability for more efficient ticket assignment.",
+                tech: ["React", "Web Development", "UI Design"]
+            },
+            "rollcall": {
+                category: "GROUP PROJECT",
+                year: "2026",
+                icon: "RC",
+                title: "RollCall+",
+                subtitle: "IoT-Based Smart Classroom Attendance Monitoring System",
+                description: "An IoT-based attendance system using ESP32 and RFID technology, with cloud integration for automated attendance recording and real-time monitoring.",
+                tech: ["ESP32", "RFID", "Google Apps Script", "Google Sheets"]
+            },
+            "lakbaybites": {
+                category: "GROUP PROJECT",
+                year: "2026",
+                icon: "LB",
+                title: "LakbayBites",
+                subtitle: "Discovering Filipino Communities Through Food",
+                description: "A research and business model project exploring regional Filipino cuisine through a proposed web application focused on cultural storytelling, local vendor support, and culinary tourism.",
+                tech: ["Business Model Canvas", "Web Application", "Cultural Research"]
+            },
+            "sharktap": {
+                category: "GROUP PROJECT",
+                year: "2026",
+                icon: "ST",
+                title: "SharkTap",
+                subtitle: "Real-Time Multiplayer Tap Game",
+                description: "A multiplayer Android game developed with Spring Boot and Apache Kafka, featuring real-time event processing and gameplay tracking.",
+                tech: ["Spring Boot", "Apache Kafka", "Android"]
+            },
+            "upims": {
+                category: "GROUP PROJECT",
+                year: "2025",
+                icon: "UP",
+                title: "UPIMS - The Green Table Co.",
+                subtitle: "Urban Product Inventory Management System",
+                description: "A full-stack web application for inventory management using REST APIs and a MySQL database.",
+                tech: ["Spring Boot", "REST APIs", "Freemarker", "MySQL"]
+            },
+            "silver-lining": {
+                category: "GROUP PROJECT",
+                year: "2025",
+                icon: "SL",
+                title: "Silver Lining Laundry Services",
+                subtitle: "Systems Integration Architecture",
+                description: "A systems integration architecture created using XML to connect a POS system with a Laundry Order Tracking System.",
+                tech: ["XML", "Systems Integration"]
+            },
+            "horror-case-study": {
+                category: "GROUP PROJECT",
+                year: "2025",
+                icon: "HM",
+                title: "Horror Movie Box Office Case Study",
+                subtitle: "Data Mining and Predictive Modeling",
+                description: "A case study using Python and Jupyter Notebook focused on data mining and predictive modeling of horror movie box office performance.",
+                tech: ["Python", "Jupyter Notebook", "Data Mining"]
+            },
+            "horror-analysis": {
+                category: "GROUP PROJECT",
+                year: "2025",
+                icon: "HA",
+                title: "Horror Movie Box Office Analysis",
+                subtitle: "CRISP-DM Data Science Project",
+                description: "A data science project following the CRISP-DM methodology and using a C5.0 Decision Tree model to analyze horror movie box office performance.",
+                tech: ["Python", "CRISP-DM", "C5.0 Decision Tree"]
+            },
+            "wais-ways": {
+                category: "GROUP PROJECT",
+                year: "2025",
+                icon: "WW",
+                title: "Wais Ways",
+                subtitle: "Climate Action and Disaster Preparedness",
+                description: "A prototype mobile application designed to promote climate action and disaster preparedness through interactive learning, gamified mini-games, and localized scenarios.",
+                tech: ["Figma", "UI/UX", "Mobile Prototype"]
+            },
+            "guinayangan": {
+                category: "GROUP PROJECT",
+                year: "2025",
+                icon: "GT",
+                title: "Guinayangan Tourism",
+                subtitle: "Website for Promoting Local Attractions and Culture",
+                description: "A tourism website featuring user accounts, visitor inquiries, and administrative tools for promoting local attractions and culture.",
+                tech: ["HTML", "CSS", "PHP"]
+            },
+            "healthcare": {
+                category: "GROUP PROJECT",
+                year: "2025",
+                icon: "HC",
+                title: "Healthcare Management System",
+                subtitle: "Desktop Management Application",
+                description: "A desktop application featuring role-based access, appointment scheduling, and exportable reports for healthcare management.",
+                tech: ["Java", "Desktop Application", "Role-Based Access"]
+            },
+            "carwash": {
+                category: "GROUP PROJECT",
+                year: "2024",
+                icon: "CW",
+                title: "Car Wash Management Database System",
+                subtitle: "Oracle Database System",
+                description: "A database system built with normalized tables, integrity constraints, stored procedures, and triggers.",
+                tech: ["Oracle SQL", "Stored Procedures", "Triggers"]
+            },
+            "physio-research": {
+                category: "RESEARCH PAPER",
+                year: "2026",
+                icon: "PR",
+                title: "PhysioZap Design Analysis",
+                subtitle: "Targeted Muscle Rehabilitation and Interactive Physiotherapy",
+                description: "A research paper analyzing the usability, practicality, and potential effectiveness of a proposed mobile application for targeted muscle rehabilitation and interactive physiotherapy.",
+                tech: ["Usability Research", "Mobile Application", "UX"]
+            },
+            "roblox": {
+                category: "RESEARCH PAPER",
+                year: "2025",
+                icon: "RB",
+                title: "Mobile Interaction Design in Roblox Gaming",
+                subtitle: "Multi-Touch Usability, Player Immersion, and Prolonged Play",
+                description: "A research survey analyzing mobile interaction design in Roblox, focusing on multi-touch usability, player immersion, and user experience during prolonged gameplay.",
+                tech: ["UX Research", "Survey", "Mobile Interaction"]
+            },
+            "cognitive-ai": {
+                category: "RESEARCH PAPER",
+                year: "2025",
+                icon: "AI",
+                title: "Mind Games and Machines",
+                subtitle: "Cognitive-Aware AI and Behavioral Biometrics",
+                description: "A research paper reviewing AI and behavioral biometrics in cybersecurity, focusing on insider threats, social engineering, and future research directions.",
+                tech: ["AI", "Behavioral Biometrics", "Cybersecurity"]
+            },
+            "social-engineering": {
+                category: "RESEARCH PAPER",
+                year: "2024",
+                icon: "SE",
+                title: "Two Steps Ahead",
+                subtitle: "Cognitive Biases and Social Engineering",
+                description: "A research paper analyzing how cognitive biases can increase vulnerability to social engineering attacks using global and Philippine case studies.",
+                tech: ["Cybersecurity", "Cognitive Bias", "Case Studies"]
+            }
+        };
+
+        function openProject(projectId) {
+            const project = projects[projectId];
+
+            document.getElementById("modalCategory").textContent = project.category;
+            document.getElementById("modalYear").textContent = project.year;
+            document.getElementById("modalIcon").textContent = project.icon;
+            document.getElementById("modalTitle").textContent = project.title;
+            document.getElementById("modalSubtitle").textContent = project.subtitle;
+            document.getElementById("modalDescription").textContent = project.description;
+
+            const techContainer = document.getElementById("modalTech");
+            techContainer.innerHTML = "";
+
+            project.tech.forEach(tech => {
+                const tag = document.createElement("span");
+                tag.textContent = tech;
+                techContainer.appendChild(tag);
+            });
+
+            document.getElementById("projectModal").classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeProject() {
+            document.getElementById("projectModal").classList.remove("show");
+            document.body.style.overflow = "";
+        }
+
+        document.getElementById("projectModal").addEventListener("click", function(event) {
+            if (event.target === this) {
+                closeProject();
+            }
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closeProject();
+            }
+        });
+
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const filter = button.dataset.filter;
+
+                projectCards.forEach(card => {
+                    if (filter === "all" || card.dataset.category === filter) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
