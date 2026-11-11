@@ -279,44 +279,36 @@ document.addEventListener("keydown", (event) => {
 
 /* =========================================================
    SCROLL-BASED ID SCAN
-   ONLY MOVES WHEN SCROLLING DOWN
+   TRACKS THE ID CARD AS IT PASSES THROUGH THE VIEWPORT
    ========================================================= */
 
 const aboutSection = document.querySelector(".about");
 const idScanLine = document.querySelector(".scan-line");
 
 if (aboutSection && idScanLine) {
-    let lastScrollY = window.scrollY;
-    let scanProgress = 0;
+    const scanTarget = idScanLine.parentElement;
+    const mobileScanQuery = window.matchMedia("(max-width: 767px)");
 
     function updateIDScan() {
-        const currentScrollY = window.scrollY;
-
-        /* Only scan while scrolling DOWN */
-        if (currentScrollY > lastScrollY) {
-            const rect = aboutSection.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            const start = viewportHeight * 0.85;
-            const end = -rect.height * 0.15;
-
-            scanProgress =
-                (start - rect.top) /
-                (start - end);
-
-            scanProgress = Math.max(0, Math.min(1, scanProgress));
-
-            const scanPosition = -15 + (scanProgress * 130);
-            idScanLine.style.top = `${scanPosition}%`;
-
-            if (scanProgress > 0.02 && scanProgress < 0.98) {
-                idScanLine.style.opacity = "1";
-            } else {
-                idScanLine.style.opacity = "0";
-            }
+        if (mobileScanQuery.matches) {
+            idScanLine.classList.add("mobile-scan");
+            idScanLine.style.top = "";
+            idScanLine.style.opacity = "";
+            return;
         }
 
-        /* Remember current scroll position */
-        lastScrollY = currentScrollY;
+        idScanLine.classList.remove("mobile-scan");
+        const rect = scanTarget.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const start = viewportHeight * 0.88;
+        const end = -rect.height * 0.12;
+        let scanProgress = (start - rect.top) / (start - end);
+
+        scanProgress = Math.max(0, Math.min(1, scanProgress));
+
+        const scanPosition = -15 + (scanProgress * 130);
+        idScanLine.style.top = `${scanPosition}%`;
+        idScanLine.style.opacity = scanProgress > 0.02 && scanProgress < 0.98 ? "1" : "0";
     }
 
     window.addEventListener("scroll", updateIDScan, {

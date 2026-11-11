@@ -2,7 +2,26 @@
 const folders = document.querySelectorAll('.home-folders a.folder');
 const container = document.querySelector('.home-folders');
 
-folders.forEach(folder => {
+const navToggle = document.querySelector('.nav-toggle');
+const navbar = document.querySelector('.navbar');
+
+if (navToggle && navbar) {
+    navToggle.addEventListener('click', () => {
+        const isOpen = navbar.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
+    navbar.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Open navigation menu');
+        });
+    });
+}
+
+if (container) folders.forEach(folder => {
     let isDragging = false;
     let moved = false;
     let mouseOffsetX = 0;
@@ -64,7 +83,7 @@ folders.forEach(folder => {
 /* ============= DIALOG BOX ============= */
 const dragImg = document.querySelector(".home-right img");
 
-dragImg.addEventListener("mousedown", (e) => {
+if (dragImg) dragImg.addEventListener("mousedown", (e) => {
     dragImg.style.cursor = "pointer";
 
     let offsetX = e.clientX - dragImg.offsetLeft;
@@ -83,28 +102,27 @@ dragImg.addEventListener("mousedown", (e) => {
     }, { once: true });
 });
 
-dragImg.ondragstart = () => false;
+if (dragImg) dragImg.ondragstart = () => false;
 
 /* ================= ID ================= */
 const idImg = document.querySelector('.home-left img');
 const centerContainer = document.getElementById('center-image-container');
 const blurOverlay = document.getElementById('blur-overlay');
 
-idImg.addEventListener('click', () => {
+if (idImg && centerContainer && blurOverlay) idImg.addEventListener('click', () => {
     centerContainer.style.display = 'block';
     blurOverlay.style.display = 'block';
     document.body.style.overflow = 'hidden'; // prevent scrolling
 });
 
-blurOverlay.addEventListener('click', () => {
+if (blurOverlay && centerContainer) blurOverlay.addEventListener('click', () => {
     centerContainer.style.display = 'none';
     blurOverlay.style.display = 'none';
     document.body.style.overflow = 'auto';   // restore scrolling
 });
 
-centerContainer.addEventListener('click', () => {
+if (centerContainer && blurOverlay) centerContainer.addEventListener('click', () => {
     centerContainer.style.display = 'none';
     blurOverlay.style.display = 'none';
     document.body.style.overflow = 'auto';
 });
-
